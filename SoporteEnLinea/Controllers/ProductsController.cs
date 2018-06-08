@@ -36,6 +36,8 @@ namespace SoporteEnLinea.Controllers
             }
             return View(product);
         }
+        
+        //line of test. You can erase this line. 
 
         // GET: Products/Create
         [Authorize(Roles = "Administrador")]
