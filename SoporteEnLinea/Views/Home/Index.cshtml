@@ -6,10 +6,13 @@
     <h1>BARBERSHOP WEB</h1>
     <p class="lead">BarberShop-Web es una aplicacion que te permite manejar todo lo concerniente a una barberia de prestigio</p>
     @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Click Aqui para ver los servicios</a></p>*@
-    <p>@Html.ActionLink("Registraste para ver nuestro catalogo", "Register", "Account")</p>
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <p class="btn btn-primary btn-lg">@Html.ActionLink("-", "Register", "Account") Registraste para ver nuestro catalogo </p>
+    }
 </div>
 
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
         <p>
@@ -29,4 +32,4 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
-</div>
+</div>*@
