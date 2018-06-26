@@ -29,6 +29,7 @@
 
                     @if (User.Identity.IsAuthenticated)
                     {
+
                         <li>@Html.ActionLink("Productos", "Index", "Products")</li>
                     }
 
@@ -46,12 +47,12 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
-    </div>
 
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

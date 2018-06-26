@@ -233,6 +233,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imgs\if_Esthetician1_2316000 %281%29.png" />
+    <Content Include="Imgs\if_Hairdresser1_2315995.png" />
+    <Content Include="Imgs\if_Nails_Salon1_2315986.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -292,6 +295,8 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Shared\_ProductosAdministrador.cshtml" />
+    <Content Include="Views\Shared\_ProductosUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
