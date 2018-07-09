@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -218,10 +219,22 @@
     <Compile Include="Migrations\201806071909047_ProductModelUpdate.Designer.cs">
       <DependentUpon>201806071909047_ProductModelUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807090118245_AddCustomersTable.cs" />
+    <Compile Include="Migrations\201807090118245_AddCustomersTable.Designer.cs">
+      <DependentUpon>201807090118245_AddCustomersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807091147364_AddadressField.cs" />
+    <Compile Include="Migrations\201807091147364_AddadressField.Designer.cs">
+      <DependentUpon>201807091147364_AddadressField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DocumentType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderStatus.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -297,6 +310,11 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Shared\_ProductosAdministrador.cshtml" />
     <Content Include="Views\Shared\_ProductosUsuario.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +346,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806071909047_ProductModelUpdate.resx">
       <DependentUpon>201806071909047_ProductModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807090118245_AddCustomersTable.resx">
+      <DependentUpon>201807090118245_AddCustomersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807091147364_AddadressField.resx">
+      <DependentUpon>201807091147364_AddadressField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
