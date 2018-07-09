@@ -227,6 +227,10 @@
     <Compile Include="Migrations\201807091147364_AddadressField.Designer.cs">
       <DependentUpon>201807091147364_AddadressField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807091401510_Quantyti.cs" />
+    <Compile Include="Migrations\201807091401510_Quantyti.Designer.cs">
+      <DependentUpon>201807091401510_Quantyti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -304,11 +308,6 @@
     <Content Include="Views\Roles\Details.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Shared\_ProductosAdministrador.cshtml" />
     <Content Include="Views\Shared\_ProductosUsuario.cshtml" />
     <Content Include="Views\Customers\Create.cshtml" />
@@ -316,6 +315,11 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -353,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807091147364_AddadressField.resx">
       <DependentUpon>201807091147364_AddadressField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807091401510_Quantyti.resx">
+      <DependentUpon>201807091401510_Quantyti.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
