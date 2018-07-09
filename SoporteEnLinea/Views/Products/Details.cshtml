@@ -42,12 +42,17 @@
             @Html.DisplayFor(model => model.Category)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @if (User.IsInRole("Administrador"))
-    {
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) 
-    }
-        @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

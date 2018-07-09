@@ -1,5 +1,11 @@
 ﻿@model IEnumerable<SoporteEnLinea.Models.Product>
 
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -16,6 +22,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
         </th>
         <th></th>
     </tr>
@@ -36,16 +45,14 @@
                 @Html.DisplayFor(modelItem => item.Category)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.ProductID })
-                @if (User.IsInRole("Administrador"))
-                {
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID })
-
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
-
-                }
-
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
             </td>
         </tr>
     }
+
 </table>

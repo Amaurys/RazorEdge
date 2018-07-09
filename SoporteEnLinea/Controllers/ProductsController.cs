@@ -10,7 +10,6 @@ using SoporteEnLinea.Models;
 
 namespace SoporteEnLinea.Controllers
 {
-    [Authorize]
     public class ProductsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -22,7 +21,6 @@ namespace SoporteEnLinea.Controllers
         }
 
         // GET: Products/Details/5
-        
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,8 +34,6 @@ namespace SoporteEnLinea.Controllers
             }
             return View(product);
         }
-        
-        //line of test. You can erase this line. 
 
         // GET: Products/Create
         [Authorize(Roles = "Administrador")]
@@ -47,12 +43,12 @@ namespace SoporteEnLinea.Controllers
         }
 
         // POST: Products/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse.
-
+        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
+        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Administrador")]
-        public ActionResult Create([Bind(Include = "ProductID,Name,Description,Price,Category")] Product product)
+        public ActionResult Create([Bind(Include = "ProductID,Name,Description,Price,Category,Quantity")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +82,7 @@ namespace SoporteEnLinea.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Administrador")]
-        public ActionResult Edit([Bind(Include = "ProductID,Name,Description,Price,Category")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductID,Name,Description,Price,Category,Quantity")] Product product)
         {
             if (ModelState.IsValid)
             {
