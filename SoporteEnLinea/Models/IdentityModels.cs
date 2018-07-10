@@ -35,5 +35,11 @@ namespace SoporteEnLinea.Models
         public System.Data.Entity.DbSet<SoporteEnLinea.Models.Customer> Customers { get; set; }
 
         public System.Data.Entity.DbSet<SoporteEnLinea.Models.DocumentType> DocumentTypes { get; set; }
+
+        public System.Data.Entity.DbSet<SoporteEnLinea.Models.Order> Orders { get; set; }
+
+        public System.Data.Entity.DbSet<SoporteEnLinea.Models.OrderDetail> OrderDetails { get; set; }
+
+
     }
 }
