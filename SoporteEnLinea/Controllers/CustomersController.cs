@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -39,10 +39,7 @@ namespace SoporteEnLinea.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
-            var list = db.DocumentTypes.ToList();
-            //list.Add(new DocumentType { DocumentTypeID = 0, Descripcion = "[Seleccione un tipo de documento...]" });
-            list = list.OrderBy(c => c.Descripcion).ToList();
-            ViewBag.DocumentTypeID = new SelectList(list, "DocumentTypeID", "Descripcion");
+            ViewBag.DocumentTypeID = new SelectList(db.DocumentTypes, "DocumentTypeID", "Descripcion");
             return View();
         }
 
@@ -51,7 +48,7 @@ namespace SoporteEnLinea.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,PhoneNumber,Adress,Email,Document,DocumentTypeID")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,Numero,Direccion,Email,Document,DocumentTypeID")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +82,7 @@ namespace SoporteEnLinea.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,PhoneNumber,Adress,Email,Document,DocumentTypeID")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,Numero,Direccion,Email,Document,DocumentTypeID")] Customer customer)
         {
             if (ModelState.IsValid)
             {
