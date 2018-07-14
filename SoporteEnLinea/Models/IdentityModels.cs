@@ -40,6 +40,12 @@ namespace SoporteEnLinea.Models
 
         public System.Data.Entity.DbSet<SoporteEnLinea.Models.OrderDetail> OrderDetails { get; set; }
 
+        public System.Data.Entity.DbSet<SoporteEnLinea.Models.Employee> Employees { get; set; }
+
+        public System.Data.Entity.DbSet<SoporteEnLinea.Models.Reservation> Reservations { get; set; }
+
+        //public System.Data.Entity.DbSet<SoporteEnLinea.Models.Employee> Employees { get; set; }
+
 
     }
 }

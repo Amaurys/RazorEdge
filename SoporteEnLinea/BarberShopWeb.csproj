@@ -196,10 +196,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Migrations\201805161404086_eliminando-roleid-de-sql.cs" />
     <Compile Include="Migrations\201805161404086_eliminando-roleid-de-sql.Designer.cs">
@@ -240,10 +242,27 @@
     <Compile Include="Migrations\201807100201533_AddCustomersField.Designer.cs">
       <DependentUpon>201807100201533_AddCustomersField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807130334462_addEmployee.cs" />
+    <Compile Include="Migrations\201807130334462_addEmployee.Designer.cs">
+      <DependentUpon>201807130334462_addEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807130400253_updatingEmployee.cs" />
+    <Compile Include="Migrations\201807130400253_updatingEmployee.Designer.cs">
+      <DependentUpon>201807130400253_updatingEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807140031114_AddTableEmployee.cs" />
+    <Compile Include="Migrations\201807140031114_AddTableEmployee.Designer.cs">
+      <DependentUpon>201807140031114_AddTableEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807140106484_AddTableReservation.cs" />
+    <Compile Include="Migrations\201807140106484_AddTableReservation.Designer.cs">
+      <DependentUpon>201807140106484_AddTableReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DocumentType.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
@@ -251,6 +270,7 @@
     <Compile Include="Models\OrderStatus.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductOrder.cs" />
+    <Compile Include="Models\Reservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\OrderView.cs" />
@@ -333,6 +353,16 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Orders\NewOrder.cshtml" />
     <Content Include="Views\Orders\AddProduct.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Reservations\Create.cshtml" />
+    <Content Include="Views\Reservations\Delete.cshtml" />
+    <Content Include="Views\Reservations\Details.cshtml" />
+    <Content Include="Views\Reservations\Edit.cshtml" />
+    <Content Include="Views\Reservations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -379,6 +409,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807100201533_AddCustomersField.resx">
       <DependentUpon>201807100201533_AddCustomersField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807130334462_addEmployee.resx">
+      <DependentUpon>201807130334462_addEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807130400253_updatingEmployee.resx">
+      <DependentUpon>201807130400253_updatingEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807140031114_AddTableEmployee.resx">
+      <DependentUpon>201807140031114_AddTableEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807140106484_AddTableReservation.resx">
+      <DependentUpon>201807140106484_AddTableReservation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
