@@ -50,7 +50,7 @@ namespace SoporteEnLinea.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,IdEmployee,IdUser,TurnDate")] Reservation reservation)
+        public ActionResult Create([Bind(Include = "Id,IdEmployee,IdUser,TurnDate,Status")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace SoporteEnLinea.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Administrador")]
-        public ActionResult Edit([Bind(Include = "Id,IdEmployee,IdUser,TurnDate")] Reservation reservation)
+        public ActionResult Edit([Bind(Include = "Id,IdEmployee,IdUser,TurnDate,Status")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {

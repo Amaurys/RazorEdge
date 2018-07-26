@@ -14,6 +14,7 @@ namespace SoporteEnLinea.Models
         public int IdEmployee { get; set; }
         public string IdUser { get; set; }
         public DateTime TurnDate { get; set; }
+        public string Status { get; set; }
 
         [ForeignKey("IdEmployee")]
         public virtual Employee Employee { get; set; }

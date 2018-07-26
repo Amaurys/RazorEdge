@@ -258,6 +258,14 @@
     <Compile Include="Migrations\201807140106484_AddTableReservation.Designer.cs">
       <DependentUpon>201807140106484_AddTableReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807260146003_Uriel-25072018.cs" />
+    <Compile Include="Migrations\201807260146003_Uriel-25072018.Designer.cs">
+      <DependentUpon>201807260146003_Uriel-25072018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807261423070_Uriel-26072018-StatusField.cs" />
+    <Compile Include="Migrations\201807261423070_Uriel-26072018-StatusField.Designer.cs">
+      <DependentUpon>201807261423070_Uriel-26072018-StatusField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -421,6 +429,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807140106484_AddTableReservation.resx">
       <DependentUpon>201807140106484_AddTableReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807260146003_Uriel-25072018.resx">
+      <DependentUpon>201807260146003_Uriel-25072018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807261423070_Uriel-26072018-StatusField.resx">
+      <DependentUpon>201807261423070_Uriel-26072018-StatusField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
